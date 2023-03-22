@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <form action="#" method="post" class="header__form">
+            <input type="text" class="header__input" placeholder="Поиск">
+        </form>
+    </header>
+    <aside class="aside">
+        <nav class="aside__nav">
+            <h2 class="aside__title">Меню</h2>
+            <ul class="aside__menu-list">
+                <li class="aside__menu-list-item">
+                    Пункт 1
+                </li>
+                <li class="aside__menu-list-item">
+                    Пункт 2
+                </li>
+                <li class="aside__menu-list-item">
+                    Пункт 3
+                </li>
+                <li class="aside__menu-list-item">
+                    Пункт 4
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="main">
+        <form class="data-form" id="data-form">
+        <table class="data-form__table">
+            <thead class="data-form__table-thead">
+                <tr class="data-form__table-thead-tr">
+                    <th class="data-form__table-thead-th">ФИО</th>
+                    <th class="data-form__table-thead-th">Должность</th>
+                    <th class="data-form__table-thead-th">Возраст</th>
+                    <th class="data-form__table-thead-th">Компетенции</th>
+                </tr>
+            </thead>
+            <tbody class="data-form__table-tbody">
+                <tr class="data-form__table-tbody-tr">
+                    <td class="data-form__table-tbody-td">
+                        <input type="text" class="data-form__input fio" name="fio" required>
+                    </td>
+                    <td class="data-form__table-tbody-td">
+                        <select name="position" class="data-form__select">
+                            <option value="аналитик" class="data-form__select-option" selected>аналитик</option>
+                            <option value="менеджер" class="data-form__select-option">менеджер</option>
+                            <option value="программист" class="data-form__select-option">программист</option>
+                            <option value="юрист" class="data-form__select-option">юрист</option>
+                        </select>
+                    </td>
+                    <td class="data-form__table-tbody-td">
+                        <input type="number" class="data-form__input age" name="age" required>
+                    </td>
+                    <td class="data-form__table-tbody-td">
+                        <textarea name="competencies" class="data-form__textarea competencies"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+         <fieldset class="data-form__btn-group">
+            <button type="submit" class="data-form__submit-btn">Отправить</button>
+            <button type="button" class="data-form__add-btn">Добавить</button>
+         </fieldset>
+         <button type="button" class="data-form__delete-btn">-</button>
+        </form>
+    </main>
+    <footer class="footer">
+    </footer>
+</body>
+</html>

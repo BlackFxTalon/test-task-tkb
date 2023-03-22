@@ -1,0 +1,177 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+}
+
+ul,ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+}
+
+select {
+    width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "aside header"            
+    "aside main"            
+    "aside footer";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    color: black;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    border-bottom: none;
+}
+
+.aside {
+    grid-area: aside;
+    border: 5px solid black;
+    border-right: none;
+    font-weight: bold;
+    padding: 5px;
+    padding-top: 4rem;
+}
+
+.aside__title {
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    margin-bottom: 1rem;
+}
+
+.aside__menu-list {
+   display: grid;
+   gap: 2px;
+   padding-left: 1rem;
+}
+.aside__menu-list-item {
+    display: flex;
+    align-items: center;
+}
+.aside__menu-list-item::before {
+    content: '-';
+    padding-right: 5px;
+}
+
+.main {
+    grid-area: main;
+    display: flex;
+    padding-top: 3rem;
+    justify-content: center;
+    border: 5px solid black;
+    border-bottom: none;
+}
+
+.footer {
+    grid-area: footer;
+    border: 5px solid black;
+}
+
+.data-form {
+    position: relative;
+}
+
+.data-form__table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.data-form__table-thead-tr,
+.data-form__table-tbody-tr {
+    display: grid;
+    grid-template-columns: repeat(3,1fr) 300px;
+}
+
+.data-form__table-thead-tr {
+    font-weight: bold;
+}
+
+.data-form__table-thead-th {
+    display: flex;
+    align-items: flex-start;
+    padding: 5px;
+    padding-left: 10px;
+    border-bottom: 1px solid black;
+}
+
+
+.data-form__table-thead-th:not(:last-child) {
+    border-right: 1px solid black;
+}
+
+.data-form__table-tbody-td {
+   padding: 5px;
+   padding-top: 10px;
+   padding-bottom: 1rem;
+}
+.data-form__table-tbody-td:not(:last-child) {
+    border-right: 1px solid black;
+}
+
+.data-form__table-tbody-tr:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+
+.data-form__table-tbody-tr.visible {
+    display: grid;
+}
+
+.data-form__table-tbody-tr.invisible {
+    display: none;
+}
+
+.data-form__input,
+.data-form__select {
+    max-width: 100px;
+    margin-right: 1rem;
+}
+
+.data-form__select {
+    height: 22px;
+}
+
+.data-form__textarea.competencies {
+    height: 60px;
+}
+
+.data-form__delete-btn {
+    position: absolute;
+    right: -3rem;
+    top: 3rem;
+    margin-left: 1rem;
+    min-width: 30px;
+}
+
+.data-form__btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-left: 10px;
+    padding-right: 10px;
+}
